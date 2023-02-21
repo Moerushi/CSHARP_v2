@@ -9,13 +9,13 @@ string EvenNum(int arg1, int arg2)
 {
 if (arg1 % arg2 == 0)
 {
-  string resultEven;
-  return resultEven = "Кратно";
+  string resultEven = "Кратно";
+  return resultEven;
 }
 else
 {
-  string resultOdd;
-  return resultOdd = "Не кратно, остаток = " + (arg1 % arg2);
+  string resultOdd = "Не кратно, остаток = " + (arg1 % arg2);
+  return resultOdd;
 }
 }
 
