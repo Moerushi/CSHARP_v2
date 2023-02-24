@@ -186,16 +186,6 @@ Here you may find tasks that were solved during seminar 003.
 
 [Solution](/sem003/task002/Program.cs)
 
-## Task 003
-
-
-[Solution](/sem003/task003/Program.cs)
-
-## Task 004
-
-
-[Solution](/sem003/task004/Program.cs)
-
 ____
 # Homework 003
 Here you may find homework to seminar 003.
@@ -258,3 +248,11 @@ Here you may find homework to seminar 003.
 6, 1, 33 -> [6, 1, 33]
 
 [Solution](/hw004/task002/Program.cs)
+___
+# Seminar 004
+Here you may find tasks that were solved during seminar 004.
+
+## Task 001
+Вывести наименование страницы в консоле.
+
+[Solution](/sem005/task001/Program.cs)
