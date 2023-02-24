@@ -42,7 +42,7 @@ string ConvertToString(int[] array)
   }
   return oneLine;
 }
-// 4. Проверка и создание нового файла в директории
+// 5. Проверка и создание нового файла в директории
 void FillFile(string path, string msg)
 {
     System.IO.File.WriteAllText(path, msg);

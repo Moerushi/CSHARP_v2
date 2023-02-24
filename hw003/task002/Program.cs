@@ -5,12 +5,12 @@
 
 // Подзадачи:
 // 1. Создать массив
-double[] createArray(int size)
+double[] CreateArray(int size)
 {
   return new double[size];
 }
 // 2. Заполнить координаты точек, попросив пользователя
-void fillArrayByUser(double[] array)
+void FillArrayByUser(double[] array)
 {
   int size = array.Length;
   int index = 0;
@@ -35,17 +35,17 @@ void fillArrayByUser(double[] array)
   }
 }
 // 3. Высчитать результат
-double distanceResult(double[] array1, double[] array2)
+double DistanceResult(double[] array1, double[] array2)
 {
   return Math.Round(Math.Sqrt(Math.Pow(array2[0] - array1[0], 2) + Math.Pow(array2[1] - array1[1], 2) + Math.Pow(array2[2] - array1[2], 2)), 2);
 }
 
 // Решение:
 
-double[] firstCoordinates = createArray(3);
-double[] secondCoordinates = createArray(3);
+double[] firstCoordinates = CreateArray(3);
+double[] secondCoordinates = CreateArray(3);
 Console.WriteLine("Input first coordinate: ");
-fillArrayByUser(firstCoordinates);
+FillArrayByUser(firstCoordinates);
 Console.WriteLine("Input second coordinate: ");
-fillArrayByUser(secondCoordinates);
-Console.WriteLine($"Distance between two coordinates is {distanceResult(firstCoordinates, secondCoordinates)}");
+FillArrayByUser(secondCoordinates);
+Console.WriteLine($"Distance between two coordinates is {DistanceResult(firstCoordinates, secondCoordinates)}");

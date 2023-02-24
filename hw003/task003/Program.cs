@@ -4,18 +4,18 @@
 
 // Подзадачи:
 // 1. Запросить ввод числа
-int getNumber(string text)
+int GetNumber(string text)
 {
   Console.Write(text);
   return Convert.ToInt32(Console.ReadLine());
 }
 // 2. Создать массив
-int[] createArray(int size)
+int[] CreateArray(int size)
 {
   return new int[size];
 }
 // 3. Заполнить массив
-void fillArray(int[] array)
+void FillArray(int[] array)
 {
   int index = 0;
   int size = array.Length;
@@ -26,7 +26,7 @@ void fillArray(int[] array)
   }
 }
 // 4. Напечатать массив
-void printArray(int[] array)
+void PrintArray(int[] array)
 {
   int index = 0;
   int size = array.Length;
@@ -41,7 +41,7 @@ void printArray(int[] array)
 }
 
 // Решение:
-int size = getNumber("Input quantity of cubes: ");
-int[] cubesArray = createArray(size + 1);
-fillArray(cubesArray);
-printArray(cubesArray);
+int size = GetNumber("Input quantity of cubes: ");
+int[] cubesArray = CreateArray(size + 1);
+FillArray(cubesArray);
+PrintArray(cubesArray);
