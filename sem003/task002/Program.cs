@@ -1,4 +1,4 @@
-﻿// Задача: сколько раз какое число встречается
+﻿// Задача: сколько раз какое число встречается в массиве
 
 // 1 3 1 2 1 2 4 5 1 2 5 4
 // 1 - 4р
@@ -19,7 +19,7 @@ int[] createArray(int size)
 {
   return new int[size];
 }
-// 3. Распечатать массив
+// 3. Распечатать исходный массив
 string printArray(int[] array)
 {
   string result = String.Empty;
@@ -32,45 +32,61 @@ string printArray(int[] array)
   }
   return result;
 }
-// 4. Заполнить массив (случайно числами от 1 до 5)
-void fillArrayByUser(int[] array)
+// 4. Заполнить массив (случайно числами от 1 до числа пользователя)
+void fillArrayByUser(int[] array, int randNum)
 {
   int size = array.Length;
   int index = 0;
   while (index < size)
   {
-    array[index] = new Random().Next(1, 6);
+    array[index] = new Random().Next(randNum);
     index++;
   }
 }
-// 5. Создать массив уникальных значений
-// 5. Определить повторяющиеся элементы в массиве
-void determineUniqueNumbers(int[] initialArray, int[] uniqueArray)
+// 5.1 Определить повторяющиеся элементы в массиве, посчитать и вывести их
+// void determineUniqueNumbersOne(int[] array, int randSize)
+// {
+//   int countUnique = 0;
+//   bool[] uniqueNumbers = new bool[randSize];
+//   for (int i = 0; i < array.Length; i++)
+//   {
+//     int currentValue = array[i];
+//     if (!uniqueNumbers[currentValue])
+//     {
+//       for (int j = 0; j < array.Length; j++)
+//       {
+//         if (array[i] == array[j])
+//         {
+//           countUnique++;
+//         }
+//       }
+//       Console.WriteLine($"{array[i]} is reapited {countUnique} time(s).");
+//       countUnique = 0;
+//       uniqueNumbers[currentValue] = true;
+//     }
+//   }
+// }
+// 5.2 Определить повторяющиеся элементы в массиве, посчитать и вывести их
+// (оптимальный вариант без перебора по несколько раз)
+void determineUniqueNumbersTwo(int[] array, int randSize)
 {
-  int index = 0;
-  int size = initialArray.Length;
-  int sizeUniqueArray = uniqueArray.Length;
-  int j = 0;
-  uniqueArray[index] = initialArray[index];
-
-  while (index < size)
+  int[] counter = new int[randSize];
+  for (int i = 0; i < array.Length; i++)
   {
-    if(uniqueArray[index] == initialArray[index-1])
+    counter[array[i]]++;
+  }
+  for (int i = 0; i < array.Length; i++)
+  {
+    if (counter[i] != 0)
     {
-      sizeUniqueArray++;
-      uniqueArray[index] = initialArray[index-1];
+    Console.WriteLine($"{i} is reapited {counter[i]} time(s).");
     }
-      index++;
   }
 }
-// 6. Посчитать повторяющие элементы в массиве
-
-
 // Решение: 
 int size = getNumber("Input size of array: ");
+int randomSize = getNumber("Input upper range of random numbers: ");
 int[] numbers = createArray(size);
-fillArrayByUser(numbers);
+fillArrayByUser(numbers, randomSize);
 Console.WriteLine(printArray(numbers));
-int[] uniqueNumbers = createArray(1);
-Console.WriteLine(printArray(uniqueNumbers));
-determineUniqueNumbers(numbers, uniqueNumbers);
+determineUniqueNumbersTwo(numbers, randomSize);
