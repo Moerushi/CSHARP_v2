@@ -311,6 +311,35 @@ Here you may find tasks that were solved during seminar 006.
 
 ## Task 001
 
-...
+Перемножить 2 матрицы.
 
 [Solution](/sem006/task001/Program.cs)
+____
+
+# Homework 006
+Here you may find homework to seminar 006.
+
+## Task 001
+Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+0, 7, 8, -2, -2 -> 2
+1, -7, 567, 89, 223-> 3
+
+
+[Solution](/hw006/task001/Program.cs)
+
+## Task 002
+
+Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+[Solution](/hw006/task002/Program.cs)
+
+___
+# Seminar 007
+Here you may find tasks that were solved during seminar 007.
+
+## Task 001
+
+???
+
+[Solution](/sem007/task001/Program.cs)

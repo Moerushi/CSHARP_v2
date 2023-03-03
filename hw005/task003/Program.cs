@@ -40,7 +40,7 @@ double[] FindMaxMinNumber(double[] array)
   maxMinNumbers[0] = array[0];
   // Максимальный с индексом 1
   maxMinNumbers[1] = array[0];
-  for (int i = 0; i < array.Length; i++)
+  for (int i = 1; i < array.Length; i++)
   {
     if (array[i] > maxMinNumbers[1])
     {
